@@ -9,6 +9,7 @@ namespace TipCalculation
     public class Tipper
     {
         public double total_bill;
+        public int total_people;
 
         public double CalculateTip(double tip_percentage)
         {
@@ -24,5 +25,16 @@ namespace TipCalculation
         {
             return total_bill * (.15);
         }
+
+        public double Divvy(int number_of_diners)
+        {
+            double total_amount = total_bill / number_of_diners;
+
+            return total_amount;
+
+            //It must take an int parameter which specifies the number of diners, calculate the amount each should pay if the bill is split evenly, and return that amount.
+        }
     }
+
+    // test
 }
